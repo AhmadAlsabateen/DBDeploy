@@ -18,7 +18,7 @@ DB_SERVICE_DIGEST=`docker inspect --format='{{index .RepoDigests 0}}' $DOCKER_HU
 
 
 #Fill Values
-sed 's/{image-value}/$DB_SERVICE_DIGEST/' db-service-template.yaml > db-service.yaml
+sed "s|{image-value}|$DB_SERVICE_DIGEST|" db-service-template.yaml > db-service.yaml
 
 #Deploy
 kubectl apply -f db-service.yaml
