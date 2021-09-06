@@ -18,7 +18,7 @@ spec:
         image: ahmad2sabateen/db-server:latest
         imagePullPolicy: Always
       nodeSelector:
-        db-node: 1
+        db-node: "1"
 
 ---
 apiVersion: v1
