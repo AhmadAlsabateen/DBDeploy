@@ -27,7 +27,6 @@ metadata:
   name: db-service-entrypoint
   namespace: default
 spec:
-  type: NodePort
   selector:
     bb: db-service
   ports:
